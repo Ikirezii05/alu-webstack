@@ -48,4 +48,4 @@ frontend ikirezidivine-frontend-https
 backend ikirezidivine-backend
         balance roundrobin
         server 6210-web-01 100.24.68.122:80 check
-        server 6210-web-02 52.91.52.137	:80 check
+        server 6210-web-02 52.91.52.137:80 check
