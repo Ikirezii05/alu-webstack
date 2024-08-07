@@ -47,6 +47,6 @@ frontend divine-frontend-https
 
 backend divine-backend
         balance roundrobin
-        server 6214-web-01 100.24.68.122:80 check
-        server 6214-web-02 52.91.52.137:80 check
+        server 6210-web-01 100.24.68.122:80 check
+        server 6210-web-02 52.91.52.137:80 check
 
