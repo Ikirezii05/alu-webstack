@@ -33,18 +33,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend divine-frontend-http
+frontend ikirezidivine-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend divine-backend
+        default_backend ikirezidivine-backend
 
-frontend divine-frontend-https
+frontend ikirezidivine-frontend-https
 	bind *:443 ssl crt /etc/haproxy/certs/www.ikirezidivine.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend divine-backend
+	default_backend ikirezidivine-backend
 
-backend divine-backend
+backend ikirezidivine-backend
         balance roundrobin
         server 6210-web-01 100.24.68.122:80 check
         server 6210-web-02 52.91.52.137:80 check
